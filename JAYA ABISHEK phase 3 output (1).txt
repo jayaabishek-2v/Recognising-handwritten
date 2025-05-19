@@ -1,0 +1,47 @@
+=== Handwritten Digit Recognition with Deep Learning ===
+
+Model Summary:
+Model: "sequential"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ conv2d (Conv2D)             (None, 26, 26, 32)        320       
+                                                                 
+ max_pooling2d (MaxPooling2D  (None, 13, 13, 32)       0         
+ )                                                               
+                                                                 
+ conv2d_1 (Conv2D)           (None, 11, 11, 64)        18496     
+                                                                 
+ max_pooling2d_1 (MaxPooling  (None, 5, 5, 64)         0         
+ 2D)                                                             
+                                                                 
+ flatten (Flatten)           (None, 1600)              0         
+                                                                 
+ dense (Dense)               (None, 128)               204928    
+                                                                 
+ dropout (Dropout)           (None, 128)               0         
+                                                                 
+ dense_1 (Dense)             (None, 10)                1290      
+                                                                 
+=================================================================
+Total params: 225,034
+Trainable params: 225,034
+Non-trainable params: 0
+_________________________________________________________________
+
+Training the model...
+Epoch 1/10
+375/375 [==============================] - 15s 38ms/step - loss: 0.3648 - accuracy: 0.8889 - val_loss: 0.0876 - val_accuracy: 0.9745
+Epoch 2/10
+375/375 [==============================] - 14s 37ms/step - loss: 0.1198 - accuracy: 0.9634 - val_loss: 0.0599 - val_accuracy: 0.9828
+...
+Epoch 10/10
+375/375 [==============================] - 14s 37ms/step - loss: 0.0468 - accuracy: 0.9856 - val_loss: 0.0378 - val_accuracy: 0.9885
+
+Evaluating on test data...
+313/313 [==============================] - 2s 5ms/step - loss: 0.0346 - accuracy: 0.9892
+
+Test Accuracy: 0.9892
+
+Making predictions on sample images...
+1/1 [==============================] - 0s 79ms/step
